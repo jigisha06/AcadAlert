@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="student.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title> AcadAlert </title>
+</head>
+<body>
+
+  <div class="navbar">
+  <h2><i class="fa-solid fa-graduation-cap"></i> Student Portal</h2>
+  <ul class="nav-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li>|</li>
+    <li><a href="alerts.html"><i class="fa-solid fa-bell"></i> Alerts</a></li>
+    <li>|</li>
+    <li><a href="chatbot.html"><i class="fa-solid fa-robot"></i> Chatbot</a></li>
+    <li>|</li>
+    <li><a href="index.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+  </ul>
+</div>
+
+  <form onsubmit="login(); return false;">
+    <div class="login-box" id="loginBox">
+      <h3><em>Enter Enrollment number</em></h3>
+      <input type="text" id="studentName" placeholder="Enrollment number" minlength="12" required>
+      <h3><em>Password</em></h3>
+      <input type="password" id="password" placeholder="Password" required>
+      <br>
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+
+
+  <div class="sub-navbar" id="subNavbar">
+    <a href="chatbot.html" class="chatbot-btn">💬 Chatbot (Coming Soon)</a>
+  </div>
+
+
+
+  <div class="container" id="dashboard">
+    <div class="welcome" id="welcomeText"></div>
+<div class="notification-box">
+  
+<div class="notification-box">
+  <h3>🔔 Notifications</h3>
+  <ul>
+    <li class="critical"><i class="fa-solid fa-triangle-exclamation"></i> Attendance shortage in DBMS. Please attend more classes.</li>
+    <li class="approved"><i class="fa-solid fa-circle-check"></i> Attendance approved for Ebullience Freshers 2025.</li>
+    <li class="info"><i class="fa-solid fa-info-circle"></i> New tutorial schedule uploaded for Economics.</li>
+  </ul>
+</div>
+
+</div>
+    <h3>📊 Attendance Overview</h3>
+    <table>
+      <tr>
+        <th>Subject</th>
+        <th>Lecture %</th>
+        <th>Tutorial %</th>
+        <th>Status</th>
+        <th>Can Miss</th>
+      </tr>
+      <tr>
+        <td>DBMS</td>
+        <td>34%</td>
+        <td>56%</td>
+        <td><span class="badge red">Critical</span></td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Probability & Random Processes</td>
+        <td>92%</td>
+        <td>100%</td>
+        <td><span class="badge green">Safe</span></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Economics</td>
+        <td>91%</td>
+        <td>82%</td>
+        <td><span class="badge green">Safe</span></td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Data Structures & Algorithms</td>
+        <td>73%</td>
+        <td>69%</td>
+        <td><span class="badge yellow">Warning</span></td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>Digital Circuit Design</td>
+        <td>80%</td>
+        <td>100%</td>
+        <td><span class="badge green">Safe</span></td>
+        <td>5</td>
+      </tr>
+    </table>
+
+ 
+    <div class="adjusted1">
+      <h3>📌 Adjusted Attendance (Official Events)</h3>
+      <p>Select your event and enter the society code to claim attendance.</p>
+
+      <div class="event">
+        <h4>1️⃣ Ebullience Freshers 2025</h4>
+        <input type="text" id="code1" placeholder="Enter code here">
+        <button onclick="verifyCode('code1','FRESH2025')">Submit</button>
+        <p id="result1"></p>
+      </div>
+
+      <div class="event">
+        <h4>2️⃣ Educational Day Trip 2025</h4>
+        <input type="text" id="code2" placeholder="Enter code here">
+        <button onclick="verifyCode('code2','TRIP2025')">Submit</button>
+        <p id="result2"></p>
+      </div>
+
+      <div class="event">
+        <h4>3️⃣ Tech Carnival 2025</h4>
+        <input type="text" id="code3" placeholder="Enter code here">
+        <button onclick="verifyCode('code3','TECH2025')">Submit</button>
+        <p id="result3"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  
+  function login() {
+
+    const correctEnrollment = "998877665544";
+    const correctPassword = "@123"; 
+    const enteredEnrollment = document.getElementById("studentName").value.trim();
+    const enteredPassword = document.getElementById("password").value.trim();
+    if (enteredEnrollment === correctEnrollment && enteredPassword === correctPassword) {
+
+      document.getElementById("loginBox").style.display = "none";
+      document.getElementById("dashboard").style.display = "block";
+      document.getElementById("subNavbar").style.display = "block";
+      document.getElementById("welcomeText").innerHTML = "👋 Welcome, " + enteredEnrollment + "!";
+    } else {
+      alert("!! Invalid Enrollment Number or Password. Please try again.");
+    }
+  }
+
+  function verifyCode(inputId, correctCode) {
+    const input = document.getElementById(inputId).value.trim();
+    const resultId = "result" + inputId.replace("code", "");
+    const result = document.getElementById(resultId);
+
+    if (input === correctCode) {
+      result.style.color = "#2ecc71";
+      result.innerHTML = " Attendance Request sent ";
+    } else {
+      result.style.color = "#e74c3c";
+      result.innerHTML = " Invalid Code";
+    }
+  }
+
+
+
+    function verifyCode(inputId, correctCode) {
+      const input = document.getElementById(inputId).value.trim();
+      const resultId = "result" + inputId.replace("code", "");
+      const result = document.getElementById(resultId);
+
+      if (input === correctCode) {
+        result.style.color = "#2ecc71";
+        result.innerHTML = " Attendance Request sent ";
+      } else {
+        result.style.color = "#e74c3c";
+        result.innerHTML = " Invalid Code";
+      }
+    }
+  </script>
+
+</body>
+</html>
