@@ -52,17 +52,18 @@ ul {
   padding: 0;
   display: flex;
   gap: 20px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 ul li a {
   text-decoration: none;
   color: #032138;       
   font-weight: bold;
-  font-size: 17px;
+  font-size: 20px;
   padding: 8px 12px;    
   border-radius: 6px;
   transition: all 0.3s ease-in-out;
+  align-items: center;
 }
 
 ul li a:hover {
