@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher's page</title>
+  <link rel="stylesheet" href="teacher.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1>Teacher Dashboard - Dropout Risk Platform </h1>
+    <ul>
+      <li><a href="#risksum"><pre>| Risk Graph</pre></a></li>
+      <li><a href="#students"><pre>| Risk List</pre></a></li>
+      <li><a href="#events"><pre>| Events</pre></a></li>
+      <li><a href="#notif"><pre>| Notifications |</pre></a></li>
+    </ul>
+  </div>
+  
+  <div class="horizontal">
+    <div class="col" id="risksum">
+      <div class="h2d1"><h2>Risk Summary Graph</h2></div>
+      <img src="risksummary.jpg" alt="Risk Per">
+    </div>
+    <section class="section" id="students">
+      <div class="h2d2"><h2>Student Risk List (30 students)</h2></div>
+      <p class="description2">
+        <table class="risk-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Enrollment Number</th>
+        <th>Batch</th>
+        <th>Reason</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="high-risk">
+        <td>Rohan Sharma</td>
+        <td>ENR001</td>
+        <td>CSE 2023</td>
+        <td>Low Attendance (62%)</td>
+      </tr>
+      <tr class="high-risk">
+        <td>Arjun Mehta</td>
+        <td>ENR003</td>
+        <td>MTech 2024</td>
+        <td>Consistent Low Marks</td>
+      </tr>
+      <tr class="high-risk">
+        <td>Priya Singh</td>
+        <td>ENR004</td>
+        <td>IT 2024</td>
+        <td>Fee Not Paid, 1 day left</td>
+      </tr>
+      <tr class="high-risk">
+        <td>Karan Patel</td>
+        <td>ENR005</td>
+        <td>CSE 2023</td>
+        <td>Low Attendance (65%)</td>
+      </tr>
+      <tr class="high-risk">
+        <td>Ananya Verma</td>
+        <td>ENR002</td>
+        <td>ECE 2023</td>
+        <td>Low Attendance (70%)</td>
+      </tr>
+
+      <!-- Orange Rows -->
+      <tr class="medium-risk">
+        <td>Meera Nair</td>
+        <td>ENR006</td>
+        <td>ECE 2023</td>
+        <td>Low Attendance (74%)</td>
+      </tr>
+      <tr class="medium-risk">
+        <td>Sara Khan</td>
+        <td>ENR008</td>
+        <td>CSE 2023</td>
+        <td>Fee Not Paid, 3 days left</td>
+      </tr>
+      <tr class="medium-risk">
+        <td>Aakash Gupta</td>
+        <td>ENR007</td>
+        <td>CIVIL 2024</td>
+        <td>Consistent Low Marks</td>
+      </tr>
+    </tbody>
+     </table>
+      </p>
+    </section>
+  </div>
+
+  <div class="horizontal">
+    <section class="section" id="events">
+      <div class="h2d2"><h2>Events Panel</h2></div><p class="description2">
+        List of students who need attendance due to hub involvement:
+      </p>
+      <h3>Fest</h3>
+<table class="fest-table">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>Enrollment No.</th>
+        <th>Batch</th>
+        <th>Hub Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Aarav Sharma</td>
+        <td>ENR1023</td>
+        <td>2023</td>
+        <td>Music Hub</td>
+        <td>
+          <button class="accept-btn">Accept</button>
+          <button class="decline-btn">Decline</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Priya Nair</td>
+        <td>ENR1045</td>
+        <td>2024</td>
+        <td>Dance</td>
+        <td>
+          <button class="accept-btn">Accept</button>
+          <button class="decline-btn">Decline</button>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sneha Verma</td>
+        <td>ENR1121</td>
+        <td>2024</td>
+        <td>Theatre</td>
+        <td>
+          <button class="accept-btn">Accept</button>
+          <button class="decline-btn">Decline</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Ebullience</h3>
+  <table class="ebullience-table">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>Enrollment No.</th>
+        <th>Batch</th>
+        <th>Hub Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Aarav Sharma</td>
+        <td>ENR1023</td>
+        <td>2023</td>
+        <td>Music Hub</td>
+        <td>
+          <button class="accept-btn">Accept</button>
+          <button class="decline-btn">Decline</button>
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Priya Nair</td>
+        <td>ENR1045</td>
+        <td>2024</td>
+        <td>Dance</td>
+        <td>
+          <button class="accept-btn">Accept</button>
+          <button class="decline-btn">Decline</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="teacher.js"></script>
+    </section>
+    <div class="col" id="notif">
+      <div class="h2d1"><h2>Notifications</h2></div>
+      <p class="description1">
+        The following students have been identified as requiring immediate intervention due to their academic or financial issues. 
+        Their parents should be promptly notified to discuss corrective actions and ensure necessary support is provided:
+      </p>
+      <ol>
+        <b><li>Rohan Sharma and parents - Low attendance (62%)</li>
+        <li>Ananya Verma and parents - Low attendance (70%)</li>
+        <li>Arjun Mehta and parents - Consistent low marks</li>
+        <li>Priya Singh and parents - Fee not paid</li>
+        <li>Karan Patel and parents - Low attendance (65%)</li>
+        <li>Meera Nair and parents - Low attendance (74%)</li>
+        <li>Sara Khan and parents - Fee not paid</li>
+        <li>Aakash Gupta and parents - Consistent low marks</li></b>
+     </ol>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const tables = document.querySelectorAll("table");
+
+  tables.forEach(table => {
+    table.addEventListener("click", (e) => {
+      if (e.target.classList.contains("accept-btn")) {
+        const row = e.target.closest("tr");
+        let statusCell = row.querySelector(".status-cell");
+
+        // If status cell doesn't exist, create one
+        if (!statusCell) {
+          statusCell = document.createElement("td");
+          statusCell.classList.add("status-cell", "attendance-given");
+          row.appendChild(statusCell);
+        }
+
+        statusCell.textContent = "Accepted ✅";
+      }
+
+      if (e.target.classList.contains("decline-btn")) {
+        const row = e.target.closest("tr");
+        let statusCell = row.querySelector(".status-cell");
+
+        if (!statusCell) {
+          statusCell = document.createElement("td");
+          statusCell.classList.add("status-cell");
+          row.appendChild(statusCell);
+        }
+
+        statusCell.textContent = "Declined ❌";
+        statusCell.style.color = "red";
+      }
+    });
+  });
+});
+
+  </script>
+</body>
+</html>

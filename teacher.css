@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #032138; 
+  color: #032138;
+}
+
+.navbar {
+  background-color: #f5f5f5;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+h3 {
+  margin-top: 1px;
+  margin-bottom: 0px;
+  text-align: left;
+  color:white;
+}
+
+.h2d1{
+  color: black;
+}
+.h2d2{
+  color: white;
+}
+
+img {
+  display: block;       
+  margin: 0 auto;      
+  width: 600px;         
+  border-radius: 15%;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #032138;       
+  font-weight: bold;
+  font-size: 17px;
+  padding: 8px 12px;    
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+ul li a:hover {
+  background-color: #032138;   
+  color: #ffcc66;             
+  transform: scale(1.05);      
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+section{
+  color: #032138;
+  background-color: rgba(18, 127, 157, 0.822);
+  border:rgba(18, 127, 157, 0.822);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 7px;
+  margin-top: 15px;
+  width: 60% ;
+  height: 640px;
+  box-sizing: border-box;
+  overflow: visible;       
+  white-space: normal;     
+  word-wrap: break-word;   
+  box-shadow: 0 15px 15px rgba(1, 7, 9, 0.822); /* Shadow added */
+}
+.col {
+  color: #032138;
+  background-color: rgba(142, 215, 235, 0.822);
+  border:  rgba(142, 215, 235, 0.822);
+  border-radius: 15px;
+  padding: 10px;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-top: 50px;
+  width: 45%;
+  height: 500px;
+  box-sizing: border-box;
+  overflow: visible; 
+  white-space: normal;     
+  word-wrap: break-word;
+  box-shadow: 0 15px 15px rgba(1, 7, 9, 0.822);  /* Shadow added */
+}
+
+
+.horizontal {
+  display: flex;
+  gap: 10px;
+}
+
+.description1 {
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.description2 {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+.risk-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+  margin-bottom: 5px;
+  border-radius: 10px;  
+  overflow: hidden;    
+  text-align: center;
+  background-color: black;
+  box-shadow: 0 5px 5px rgba(1, 7, 9, 0.822); 
+}
+
+.risk-table th,
+.risk-table td {
+  border: 1px solid black;
+  padding: 17px;
+  text-align: left;
+}
+
+.risk-table thead {
+  background-color: #032138;
+  color: white;
+}
+
+.high-risk {
+  background-color: #e15d5dd1;
+}
+
+.medium-risk {
+  background-color: #f9af69d5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .risk-table, .risk-table thead, .risk-table tbody, .risk-table th, .risk-table td, .risk-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .risk-table tr {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .risk-table td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  .risk-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+.risk-table tbody tr {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.risk-table tbody tr:hover {
+  transform: scale(1.02);                          
+  background-color: #4c64b9be !important;           
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);      
+  cursor: pointer;
+}
+
+.fest-table, .ebullience-table { 
+  border-collapse: collapse;
+  border: 4px solid black;
+  border-radius: 10px;  /* Rounded corners */
+  overflow: hidden;  
+  width: 100%;
+  height: 15%;
+  margin-bottom: 5px;
+  font-family: Montserrat, Arial, sans-serif;
+  box-shadow: 0 10px 10px rgba(1, 7, 9, 0.822);
+  background-color: #032138;
+}
+
+.fest-table th, .fest-table td,
+.ebullience-table th, .ebullience-table td {
+  border: 2px solid #032138;
+  padding: 10px;
+  text-align: center;
+}
+
+.fest-table th, .ebullience-table th {
+  background-color:#032138;
+  color: white;
+}
+
+.fest-table tr:nth-child(even),
+.ebullience-table tr:nth-child(even) {
+  background-color: #e27434;
+}
+
+.fest-table tr:nth-child(odd),
+.ebullience-table tr:nth-child(odd) {
+  background-color:#cdb1b1f9;
+}
+
+.fest-table tbody tr:hover,
+.ebullience-table tbody tr:hover {
+  transform: scale(1.02);         
+  background-color: #862828f6 !important;  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+}
+
+.fest-table tbody tr,
+.ebullience-table tbody tr {
+  transition: all 0.3s ease-in-out;
+}
+
+.accept-btn {
+  background-color: rgb(2, 150, 2);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.decline-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.horizontal img{
+  height : 400px;
+  width:500px;
+}
+.accept-btn:hover {
+  background-color: darkgreen;
+}
+
+.decline-btn:hover {
+  background-color: darkred;
+}
+
+/* ✅ Added attendance status */
+.attendance-given {
+  font-weight: bold;
+  color: green;
+}
+
+.attendance-declined {
+  font-weight: bold;
+  color: red;
+}
+
+

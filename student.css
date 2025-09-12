@@ -238,3 +238,30 @@
   color: #00b4d8;
   border-left: 4px solid #00b4d8;
 }
+
+.fees-notification {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background: #1b263b;
+  }
+  .fees-notification h3 {
+    margin-bottom: 10px;
+  }
+  .due-row {
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  .red-row {
+    background-color: #ffcccc;
+    color: #a10000;
+  }
+  .orange-row {
+    background-color: #ffe5b4;
+    color: #a65c00;
+  }
+  .green-row {
+    background-color: #d1ffd1;
+    color: #006600;
+  }
