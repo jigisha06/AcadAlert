@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 8px rgba(22, 140, 173, 0.822);
   border-radius: 8px;
 }
 
@@ -41,10 +41,9 @@ h3 {
 img {
   display: block;       
   margin: 0 auto;      
-  width: 600px;         
-  border-radius: 15%;
+  width: 530px;         
+  border-radius: 6%;
 }
-
 
 ul {
   list-style: none;
@@ -52,18 +51,17 @@ ul {
   padding: 0;
   display: flex;
   gap: 20px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 ul li a {
   text-decoration: none;
   color: #032138;       
   font-weight: bold;
-  font-size: 20px;
+  font-size: 17px;
   padding: 8px 12px;    
   border-radius: 6px;
   transition: all 0.3s ease-in-out;
-  align-items: center;
 }
 
 ul li a:hover {
@@ -76,7 +74,7 @@ ul li a:hover {
 
 section{
   color: #032138;
-  background-color: rgba(18, 127, 157, 0.822);
+  background-color: #2e4f8c;
   border:rgba(18, 127, 157, 0.822);
   border-radius: 20px;
   padding: 10px;
@@ -117,7 +115,6 @@ section{
 .description1 {
   color: black;
   width: 100%;
-  text-align: center;
 }
 
 .description2 {
@@ -151,11 +148,11 @@ section{
 }
 
 .high-risk {
-  background-color: #e15d5dd1;
+  background-color: #fe4343e1;
 }
 
 .medium-risk {
-  background-color: #f9af69d5;
+  background-color: #f79e4bd5;
 }
 
 /* Responsive */
@@ -192,7 +189,7 @@ section{
 /* Hover effect */
 .risk-table tbody tr:hover {
   transform: scale(1.02);                          
-  background-color: #4c64b9be !important;           
+  background-color: rgba(142, 215, 235, 0.822) !important;           
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);      
   cursor: pointer;
 }
@@ -235,7 +232,7 @@ section{
 .fest-table tbody tr:hover,
 .ebullience-table tbody tr:hover {
   transform: scale(1.02);         
-  background-color: #862828f6 !important;  
+  background-color: rgba(142, 215, 235, 0.822) !important;  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   cursor: pointer;
 }
@@ -265,10 +262,7 @@ section{
   border-radius: 4px;
   font-size: 14px;
 }
-.horizontal img{
-  height : 400px;
-  width:500px;
-}
+
 .accept-btn:hover {
   background-color: darkgreen;
 }
